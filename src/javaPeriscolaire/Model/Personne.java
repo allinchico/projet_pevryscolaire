@@ -13,7 +13,8 @@ public class Personne {
         System.out.println(allActivite);
     }
 
-    public void seConnecter(){
-
+    public ArrayList<ArrayList> seConnecter(String login, String password){
+        String reqUse = "SELECT id FROM utilsateur WHERE login = '"+login+"' AND password = '"+password+"';";
+        return ConnectMySQL.main(reqUse);
     }
 }
