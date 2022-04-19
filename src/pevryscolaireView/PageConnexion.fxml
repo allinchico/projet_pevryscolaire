@@ -3,22 +3,24 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="500.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.PageConnexionController">
    <children>
-      <Button fx:id="connect" layoutX="308.0" layoutY="420.0" mnemonicParsing="false" text="Se connecter" />
-      <PasswordField fx:id="password" layoutX="126.0" layoutY="329.0" prefHeight="26.0" prefWidth="267.0" />
-      <Label layoutX="30.0" layoutY="333.0" prefHeight="18.0" prefWidth="85.0" text="Mot de passe :" />
-      <Label layoutX="30.0" layoutY="291.0" prefHeight="18.0" prefWidth="85.0" text="Identifiant :" />
-      <PasswordField fx:id="identifiant" layoutX="126.0" layoutY="287.0" prefHeight="26.0" prefWidth="267.0" />
-      <Label fx:id="messageBienvenue" layoutX="126.0" layoutY="170.0" prefHeight="18.0" prefWidth="233.0" text="Bienvenue sur la plateforme Pevryscolaire !" />
-      <ImageView fx:id="logoEvry" fitHeight="150.0" fitWidth="200.0" layoutX="143.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="connect_bouton" layoutX="308.0" layoutY="420.0" mnemonicParsing="false" onAction="#SeConnecter" text="Se connecter" />
+      <PasswordField fx:id="password" layoutX="152.0" layoutY="329.0" prefHeight="26.0" prefWidth="182.0" />
+      <Label layoutX="57.0" layoutY="333.0" prefHeight="18.0" prefWidth="85.0" text="Mot de passe :" />
+      <Label layoutX="57.0" layoutY="291.0" prefHeight="18.0" prefWidth="85.0" text="Identifiant :" />
+      <TextField layoutX="152.0" layoutY="287.0" prefHeight="26.0" prefWidth="182.0" />
+      <Label fx:id="messageBienvenue" layoutX="122.0" layoutY="174.0" prefHeight="18.0" prefWidth="233.0" text="Bienvenue sur la plateforme Pevryscolaire !" />
+      <ImageView fx:id="logoEvry" fitHeight="150.0" fitWidth="200.0" layoutX="137.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../logo_evry_courcouronnes.png" />
+            <Image url="@../image/logo_evry_courcouronnes.png" />
          </image>
       </ImageView>
+      <Label layoutX="77.0" layoutY="379.0" textFill="#cc1f1f" />
    </children>
 </AnchorPane>
