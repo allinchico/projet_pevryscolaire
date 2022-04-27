@@ -8,7 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.PageConnexionController">
+<AnchorPane prefHeight="500.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.SceneConnexionController">
    <children>
       <Button fx:id="connect_bouton" layoutX="308.0" layoutY="420.0" mnemonicParsing="false" onAction="#SeConnecter" text="Se connecter" />
       <PasswordField fx:id="password" layoutX="152.0" layoutY="329.0" prefHeight="26.0" prefWidth="182.0" />

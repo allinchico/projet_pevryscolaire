@@ -13,10 +13,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import main.MainApp;
 
-public class PageConnexionController {
+public class SceneConnexionController {
 
     @FXML
     private ResourceBundle resources;
@@ -38,24 +40,27 @@ public class PageConnexionController {
 
     @FXML
     private PasswordField password;
-
-    // Méthode pour changement de page
     
     @FXML
-    public void SeConnecter(ActionEvent event) throws IOException
-    {
-    	
-    	//main.MainApp.pagePrincipale();
-    	Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PagePrincipale.fxml"));
-    	Scene principaleScene = new Scene(pagePrincipale);
-     
+    private BorderPane panneauPrincipal;
     
+    // Méthode pour changement de page
+    @FXML
+    public void SeConnecter(ActionEvent event) {
+    	try {
+    	Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/ScenePrincipale.fxml"));
+    	Scene pagePrincipaleScene = new Scene(pagePrincipale);
+    	
+     
     // Récupère les informations de la page
     	
-	Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-	
-	window.setScene(principaleScene);
-	window.show();
-    }
-    
+    	Stage fenetrePrincipale = (Stage)((Node)event.getSource()).getScene().getWindow();
+		fenetrePrincipale.setScene(pagePrincipaleScene);
+		fenetrePrincipale.show();
+		
+    	} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}	
 }
+    

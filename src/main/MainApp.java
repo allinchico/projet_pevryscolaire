@@ -17,38 +17,47 @@ import javafx.scene.layout.StackPane;
 public class MainApp extends Application {
 
 	private Stage secondaryStage;
-	private BorderPane pagePrincipale;
+	public BorderPane pagePrincipale;
 	
 	
 	// Génère l'écran de connexion
 	@Override
-	public void start(Stage primaryStage) throws IOException
-	{
-		Parent pageConnexion = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PageConnexion.fxml"));
-		Scene connexionScene = new Scene(pageConnexion,450,500);
-		primaryStage.setScene(connexionScene);
-		primaryStage.show();	
-		primaryStage.setTitle("Application Pevryscolaire");
+	public void start(Stage primaryStage) {
+		try {
+			
+			Parent pageConnexion = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/SceneConnexion.fxml"));
+			Scene connexionScene = new Scene(pageConnexion,450,500);
+			primaryStage.setScene(connexionScene);
+			primaryStage.show();	
+			primaryStage.setTitle("Application Pevryscolaire");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}	
 
-	
+	/*
 	// Génère l'écran principale de l'application
-	public void pagePrincipale(Stage secondaryStage) throws IOException
-	{
-		this.secondaryStage = secondaryStage;
-		this.secondaryStage.setTitle("Application Pevryscolaire");
+	public void pagePrincipale(Stage secondaryStage) {
+		try {
+			
+			this.secondaryStage = secondaryStage;
+			this.secondaryStage.setTitle("Application Pevryscolaire");
 		
-		afficherPagePrincipale();
-		
-		afficherPageActivites();
-		/*
+			afficherPagePrincipale();
+		//	afficherPageActivites();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+			/*
 		Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PagePrincipale.fxml"));
 		Scene principaleScene = new Scene(pagePrincipale,600,700);
 		secondaryStage.setScene(principaleScene);
 		secondaryStage.show();	
 		secondaryStage.setTitle("Application Pevryscolaire");
-		*/
-	}
+		
+		
 	
 	//Initialise la page principale de l'application
 	public void afficherPagePrincipale() {
@@ -66,7 +75,7 @@ public class MainApp extends Application {
 			e.printStackTrace();
 		}
 	}
-	
+	/*
 	public  void afficherPageActivites() {
 		try {
 				FXMLLoader loader = new FXMLLoader();
@@ -78,7 +87,8 @@ public class MainApp extends Application {
 			 e.printStackTrace();
 		 }
 	}
-	
+	*/
+
 	public static void main(String[] args) {
 		launch(args);
 	}

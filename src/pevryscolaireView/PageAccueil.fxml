@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
 
 
-<BorderPane prefHeight="600.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
-	<!-- TODO Add Nodes -->
-</BorderPane>
+<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #FF18;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+   <children>
+      <Label layoutX="211.0" layoutY="241.0" text="PAGE ACCUEIL" />
+   </children>
+</AnchorPane>

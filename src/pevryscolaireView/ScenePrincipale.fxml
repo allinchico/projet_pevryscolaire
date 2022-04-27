@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.ScenePrincipaleController">
+   <children>
+      <BorderPane fx:id="panneauPrincipal" prefHeight="600.0" prefWidth="700.0">
+         <left>
+            <VBox prefHeight="490.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <JFXButton fx:id="boutonAccueil" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="200.0" text="Accueil" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="boutonActivites" onAction="#boutonAcceder" prefHeight="66.0" prefWidth="200.0" text="Activités" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="boutonFamille" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="200.0" text="Espace famille" textAlignment="CENTER" />
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <top>
+            <VBox prefHeight="70.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="87.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logo_evry_courcouronnes.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
