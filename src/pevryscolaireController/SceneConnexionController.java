@@ -62,5 +62,11 @@ public class SceneConnexionController {
 			e.printStackTrace();
 		}
 	}	
+    
+    
+    @FXML
+    void initialize() {
+    	
+    }
 }
     

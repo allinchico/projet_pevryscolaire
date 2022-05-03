@@ -1,11 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: #FF18;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+<AnchorPane fx:id="panneauAccueil" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.SceneConnexionController">
    <children>
-      <Label layoutX="211.0" layoutY="241.0" text="PAGE ACCUEIL" />
+      <AnchorPane layoutX="150.0" prefHeight="109.0" prefWidth="564.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="9.0" text="BONJOUR">
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="62.0" prefHeight="18.0" prefWidth="479.0" text="La plus grande part du coût de ces prestations est prise en charge par le budget communal. ">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="80.0" text="Une participation est demandée en tenant compte de vos ressources grâce au calcul de votre quotient familial.">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="44.0" prefHeight="18.0" prefWidth="549.0" text="Votre ville propose pour vos enfants des prestations afin de les accompagner et de faciliter votre organisation.">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="311.0" prefHeight="189.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="311.0">
+         <children>
+            <Label layoutX="186.0" layoutY="11.0" text="Lieux de loisirs">
+               <font>
+                  <Font name="Forte" size="30.0" />
+               </font>
+            </Label>
+            <Separator layoutX="279.0" layoutY="-86.0" orientation="VERTICAL" prefHeight="200.0" rotate="90.0" />
+            <Separator layoutX="278.0" layoutY="-54.0" orientation="VERTICAL" prefHeight="200.0" rotate="90.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="29.0" layoutY="118.0" prefHeight="200.0" prefWidth="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="79.0" layoutY="-4.0" text="Les différents services proposés" textAlignment="CENTER">
+               <font>
+                  <Font name="Forte" size="30.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="3.0" layoutY="34.0" prefHeight="166.0" prefWidth="181.0">
+               <children>
+                  <Label layoutX="19.0" layoutY="5.0" text="Accueil du matin et du soir" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="182.0" layoutY="34.0" prefHeight="166.0" prefWidth="200.0">
+               <children>
+                  <Label layoutX="73.0" layoutY="5.0" text="Les sports" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="375.0" layoutY="34.0" prefHeight="166.0" prefWidth="182.0">
+               <children>
+                  <Label layoutX="44.0" layoutY="5.0" text="L'aide aux devoirs" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

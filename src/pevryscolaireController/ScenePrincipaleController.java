@@ -96,17 +96,19 @@ public class ScenePrincipaleController implements Initializable {
 
     @FXML
     void initialize() {
-        assert boutonActivites != null : "fx:id=\"bouton_activites\" was not injected: check your FXML file 'MainWindow.fxml'.";
-        assert boutonFamille != null : "fx:id=\"bouton_famille\" was not injected: check your FXML file 'MainWindow.fxml'.";
-        assert logoEvry != null : "fx:id=\"logoEvry\" was not injected: check your FXML file 'MainWindow.fxml'.";
-        assert panneau_accueil != null : "fx:id=\"panneau_accueil\" was not injected: check your FXML file 'MainWindow.fxml'.";
-        assert panneau_activites != null : "fx:id=\"panneau_activites\" was not injected: check your FXML file 'MainWindow.fxml'.";
-        assert panneau_famille != null : "fx:id=\"panneau_famille\" was not injected: check your FXML file 'MainWindow.fxml'.";
 
     }
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
+		AnchorPane panneauAccueil;
+		try {
+			panneauAccueil = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PageAccueil.fxml"));
+			panneauPrincipal.setCenter(panneauAccueil);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		
 	}
 

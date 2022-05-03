@@ -12,39 +12,30 @@
    <children>
       <BorderPane fx:id="panneauPrincipal" prefHeight="600.0" prefWidth="700.0">
          <left>
-            <VBox prefHeight="490.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="600.0" prefWidth="195.0" BorderPane.alignment="CENTER">
                <children>
-                  <JFXButton fx:id="boutonAccueil" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="200.0" text="Accueil" textAlignment="CENTER">
+                  <ImageView fitHeight="115.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/logo_evry_courcouronnes.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="boutonAccueil" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Accueil" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="boutonActivites" onAction="#boutonAcceder" prefHeight="66.0" prefWidth="200.0" text="Activités" textAlignment="CENTER">
+                  <JFXButton fx:id="boutonActivites" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Activités" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="boutonFamille" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="200.0" text="Espace famille" textAlignment="CENTER" />
+                  <JFXButton fx:id="boutonFamille" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Espace famille" textAlignment="CENTER" />
                </children>
                <BorderPane.margin>
                   <Insets />
                </BorderPane.margin>
             </VBox>
          </left>
-         <top>
-            <VBox prefHeight="70.0" prefWidth="198.0" BorderPane.alignment="CENTER">
-               <children>
-                  <ImageView fitHeight="87.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../image/logo_evry_courcouronnes.png" />
-                     </image>
-                  </ImageView>
-               </children>
-               <BorderPane.margin>
-                  <Insets />
-               </BorderPane.margin>
-            </VBox>
-         </top>
       </BorderPane>
    </children>
 </AnchorPane>
