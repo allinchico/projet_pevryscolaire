@@ -18,6 +18,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import main.MainApp;
+import pevryscolaireModel.Personne;
 
 public class SceneConnexionController {
 
@@ -49,16 +50,22 @@ public class SceneConnexionController {
     @FXML
     public void SeConnecter(ActionEvent event) {
     	try {
-    	Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/ScenePrincipale.fxml"));
-    	Scene pagePrincipaleScene = new Scene(pagePrincipale,800,700);
-    	
-     
-    // Récupère les informations de la page
-    	
-    	Stage fenetrePrincipale = (Stage)((Node)event.getSource()).getScene().getWindow();
-		fenetrePrincipale.setScene(pagePrincipaleScene);
-		//fenetrePrincipale.hide();
-		fenetrePrincipale.show();
+    	System.out.println("Id = "+ id.getText() +" password = " + password.getText());
+		if(!Personne.seConnecter(id.getText(), password.getText()).isEmpty()) {
+			Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/ScenePrincipale.fxml"));
+	    	Scene pagePrincipaleScene = new Scene(pagePrincipale);
+	    	
+	     
+	    // Récupère les informations de la page
+	    	
+	    	Stage fenetrePrincipale = (Stage)((Node)event.getSource()).getScene().getWindow();
+			fenetrePrincipale.setScene(pagePrincipaleScene);
+			fenetrePrincipale.show();
+		}
+		else {
+			System.out.println("Problème : identifiant ou mot de passe incorrect");
+		}
+		
 		
     	} catch (IOException e) {
 			e.printStackTrace();
