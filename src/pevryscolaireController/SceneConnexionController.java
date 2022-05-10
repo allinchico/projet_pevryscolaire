@@ -1,5 +1,5 @@
 package pevryscolaireController;
-
+		
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -12,6 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -30,9 +31,6 @@ public class SceneConnexionController {
     private Button connect_bouton;
 
     @FXML
-    private PasswordField identifiant;
-
-    @FXML
     private ImageView logoEvry;
 
     @FXML
@@ -42,6 +40,9 @@ public class SceneConnexionController {
     private PasswordField password;
     
     @FXML
+    private TextField id;
+    
+    @FXML
     private BorderPane panneauPrincipal;
     
     // Méthode pour changement de page
@@ -49,13 +50,14 @@ public class SceneConnexionController {
     public void SeConnecter(ActionEvent event) {
     	try {
     	Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/ScenePrincipale.fxml"));
-    	Scene pagePrincipaleScene = new Scene(pagePrincipale);
+    	Scene pagePrincipaleScene = new Scene(pagePrincipale,800,700);
     	
      
     // Récupère les informations de la page
     	
     	Stage fenetrePrincipale = (Stage)((Node)event.getSource()).getScene().getWindow();
 		fenetrePrincipale.setScene(pagePrincipaleScene);
+		//fenetrePrincipale.hide();
 		fenetrePrincipale.show();
 		
     	} catch (IOException e) {

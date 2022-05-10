@@ -35,60 +35,6 @@ public class MainApp extends Application {
 		}
 	}	
 
-	/*
-	// Génère l'écran principale de l'application
-	public void pagePrincipale(Stage secondaryStage) {
-		try {
-			
-			this.secondaryStage = secondaryStage;
-			this.secondaryStage.setTitle("Application Pevryscolaire");
-		
-			afficherPagePrincipale();
-		//	afficherPageActivites();
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-			/*
-		Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PagePrincipale.fxml"));
-		Scene principaleScene = new Scene(pagePrincipale,600,700);
-		secondaryStage.setScene(principaleScene);
-		secondaryStage.show();	
-		secondaryStage.setTitle("Application Pevryscolaire");
-		
-		
-	
-	//Initialise la page principale de l'application
-	public void afficherPagePrincipale() {
-		try {
-				// Génère l'écran en récupérant la page fxml
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(MainApp.class.getResource("pevryscolaireView/PagePrincipale.fxml"));
-				pagePrincipale = (BorderPane) loader.load();
-				
-				// Affiche la page ayant le contenu de PagePrincipale
-				Scene scene = new Scene(pagePrincipale);
-				secondaryStage.setScene(scene);
-				secondaryStage.show();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	/*
-	public  void afficherPageActivites() {
-		try {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(MainApp.class.getResource("pevryscolaireView/PageActvites.fxml"));
-				AnchorPane pageActivites = (AnchorPane) loader.load();
-		
-				pagePrincipale.setCenter(pageActivites);
-		 } catch (IOException e) {
-			 e.printStackTrace();
-		 }
-	}
-	*/
-
 	public static void main(String[] args) {
 		launch(args);
 	}

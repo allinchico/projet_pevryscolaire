@@ -13,28 +13,28 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="700.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.PageActivitesController">
+<AnchorPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.PageActivitesController">
    <children>
-      <AnchorPane layoutY="215.0" prefHeight="200.0" prefWidth="350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutY="215.0" prefHeight="282.0" prefWidth="500.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
          <children>
-            <DatePicker fx:id="choixDate" layoutX="191.0" layoutY="134.0" prefHeight="26.0" prefWidth="130.0" />
-            <ComboBox fx:id="choixActivites" layoutX="320.0" layoutY="64.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="250.0" layoutY="68.0" text="Session :" />
-            <Label layoutX="136.0" layoutY="138.0" text="Date :" />
-            <ComboBox fx:id="choixSession" layoutX="87.0" layoutY="65.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="22.0" layoutY="69.0" text="Enfant :" />
+            <DatePicker fx:id="choixDate" layoutX="185.0" layoutY="22.0" prefHeight="26.0" prefWidth="130.0" />
+            <ComboBox fx:id="choixActivites" layoutX="315.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="250.0" layoutY="84.0" text="Session :" />
+            <Label layoutX="134.0" layoutY="26.0" text="Date :" />
+            <ComboBox fx:id="choixSession" layoutX="85.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="21.0" layoutY="84.0" text="Enfant :" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="150.0" layoutY="-1.0" prefHeight="213.0" prefWidth="500.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutX="150.0" layoutY="-1.0" prefHeight="213.0" prefWidth="500.0" AnchorPane.bottomAnchor="385.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TabPane layoutY="1.0" prefHeight="214.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane layoutY="1.0" prefHeight="214.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.5999999999999943" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <tabs>
-                  <Tab text="Menu des activités">
+                  <Tab text="Menu des sports">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Label layoutX="65.0" layoutY="121.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des activités" />
-                              <Label alignment="TOP_LEFT" layoutX="132.0" layoutY="27.0" text="Activités" textAlignment="CENTER">
+                              <Label layoutX="45.0" layoutY="122.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des sports ci-dessus" />
+                              <Label alignment="TOP_LEFT" layoutX="161.0" layoutY="29.0" text="Sports" textAlignment="CENTER">
                                  <font>
                                     <Font name="Forte" size="65.0" />
                                  </font>
@@ -159,6 +159,97 @@
                     </content>
                   </Tab>
               </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="2.0" layoutY="432.0" prefHeight="283.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="350.0">
+         <children>
+            <TabPane layoutX="10.0" layoutY="7.0" prefHeight="214.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <tabs>
+                  <Tab text="Menu des activités">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="64.0" layoutY="118.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des activités" />
+                              <Label alignment="TOP_LEFT" layoutX="131.0" layoutY="36.0" text="Activités" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Forte" size="65.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab closable="false" text="Accueil du matin">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="254.0">
+                           <children>
+                              <ImageView fitHeight="184.0" fitWidth="286.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/ballonFoot.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <TreeTableView layoutX="276.0" prefHeight="193.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                 </columns>
+                              </TreeTableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Accueil du soir">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="188.0" fitWidth="335.0" layoutX="-1.0" layoutY="-3.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/ballonBasket.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <TreeTableView layoutX="276.0" layoutY="-2.0" prefHeight="192.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                 </columns>
+                              </TreeTableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Aide aux devoirs">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="187.0" fitWidth="313.0" layoutX="-1.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../image/ballonHandball.jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <TreeTableView layoutX="280.0" prefHeight="186.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <columns>
+                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                 </columns>
+                              </TreeTableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
             </TabPane>
          </children>
       </AnchorPane>

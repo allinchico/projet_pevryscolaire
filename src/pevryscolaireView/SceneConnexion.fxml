@@ -14,7 +14,7 @@
       <PasswordField fx:id="password" layoutX="152.0" layoutY="329.0" prefHeight="26.0" prefWidth="182.0" />
       <Label layoutX="57.0" layoutY="333.0" prefHeight="18.0" prefWidth="85.0" text="Mot de passe :" />
       <Label layoutX="57.0" layoutY="291.0" prefHeight="18.0" prefWidth="85.0" text="Identifiant :" />
-      <TextField layoutX="152.0" layoutY="287.0" prefHeight="26.0" prefWidth="182.0" />
+      <TextField fx:id="id" layoutX="152.0" layoutY="287.0" prefHeight="26.0" prefWidth="182.0" />
       <Label fx:id="messageBienvenue" layoutX="122.0" layoutY="174.0" prefHeight="18.0" prefWidth="233.0" text="Bienvenue sur la plateforme Pevryscolaire !" />
       <ImageView fx:id="logoEvry" fitHeight="150.0" fitWidth="200.0" layoutX="137.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
          <image>
