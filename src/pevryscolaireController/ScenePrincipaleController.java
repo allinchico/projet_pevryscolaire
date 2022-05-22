@@ -96,7 +96,7 @@ public class ScenePrincipaleController implements Initializable {
 
     @FXML
     void initialize() {
-
+    	System.out.println("utilisateur : "+ SceneConnexionController.user);
     }
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -105,11 +105,10 @@ public class ScenePrincipaleController implements Initializable {
 		try {
 			panneauAccueil = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PageAccueil.fxml"));
 			panneauPrincipal.setCenter(panneauAccueil);
+			System.out.println("utilisateur : "+ SceneConnexionController.user.nom);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 
 }

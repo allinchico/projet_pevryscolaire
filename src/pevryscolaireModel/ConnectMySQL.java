@@ -49,7 +49,7 @@ public class ConnectMySQL
 		}
 		//etape 5: fermez l'objet de connexion
 		conn.close();
-		System.out.println("Requete effectuÃ©e");
+		System.out.println("Requete effectuée");
 		
 	}
 		//Prise en compte des erreurs potentiels

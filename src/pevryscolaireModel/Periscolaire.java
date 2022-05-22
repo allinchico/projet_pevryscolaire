@@ -3,6 +3,8 @@ package pevryscolaireModel;
 import java.util.ArrayList;
 
 public class Periscolaire extends Personne{
+	
+	
 
     public void CreerActivite(String nom, String emplacement, String idEmp){
         String reqAct = "INSERT INTO activites (nom, lieu, idPeriscolaire) VALUES ('"+ nom + "'','"+ emplacement +"'','" + idEmp +"'')";
