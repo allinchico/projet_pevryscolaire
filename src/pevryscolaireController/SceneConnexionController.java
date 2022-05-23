@@ -46,7 +46,7 @@ public class SceneConnexionController {
     @FXML
     private BorderPane panneauPrincipal;
     
-    // Méthode pour changement de page
+    // Méthode pour récupérer les infos de l'utilisateur et la connexion
     @FXML
     public void SeConnecter(ActionEvent event) {
     	try {
@@ -56,7 +56,7 @@ public class SceneConnexionController {
 	    	Scene pagePrincipaleScene = new Scene(pagePrincipale);
 	    	
 	     
-	    // Récupère les informations de la page
+	    // Génère la scène principale
 	    	
 	    	Stage fenetrePrincipale = (Stage)((Node)event.getSource()).getScene().getWindow();
 			fenetrePrincipale.setScene(pagePrincipaleScene);

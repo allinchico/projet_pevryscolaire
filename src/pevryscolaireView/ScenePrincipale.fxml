@@ -10,26 +10,26 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.ScenePrincipaleController">
    <children>
-      <BorderPane fx:id="panneauPrincipal" prefHeight="600.0" prefWidth="700.0">
+      <BorderPane fx:id="panneauPrincipal" prefHeight="600.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0">
          <left>
-            <VBox prefHeight="600.0" prefWidth="195.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="600.0" prefWidth="195.0" style="-fx-background-color: #1D2026;" BorderPane.alignment="CENTER">
                <children>
                   <ImageView fitHeight="115.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../image/logo_evry_courcouronnes.png" />
                      </image>
                   </ImageView>
-                  <JFXButton fx:id="boutonAccueil" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Accueil" textAlignment="CENTER">
+                  <JFXButton fx:id="boutonAccueil" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Accueil" textAlignment="CENTER" textFill="WHITE">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="boutonActivites" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Activités" textAlignment="CENTER">
+                  <JFXButton fx:id="boutonActivites" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Activités" textAlignment="CENTER" textFill="WHITE">
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="boutonFamille" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Espace famille" textAlignment="CENTER" />
+                  <JFXButton fx:id="boutonFamille" onAction="#boutonAcceder" prefHeight="65.0" prefWidth="285.0" text="Espace famille" textAlignment="CENTER" textFill="WHITE" />
                </children>
                <BorderPane.margin>
                   <Insets />

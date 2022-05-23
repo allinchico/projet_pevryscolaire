@@ -3,6 +3,7 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TreeTableColumn?>
@@ -17,12 +18,14 @@
    <children>
       <AnchorPane layoutY="215.0" prefHeight="282.0" prefWidth="500.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
          <children>
-            <DatePicker fx:id="choixDate" layoutX="185.0" layoutY="22.0" prefHeight="26.0" prefWidth="130.0" />
+            <DatePicker fx:id="choixDate" layoutX="315.0" layoutY="24.0" prefHeight="26.0" prefWidth="130.0" />
             <ComboBox fx:id="choixActivites" layoutX="315.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="250.0" layoutY="84.0" text="Session :" />
-            <Label layoutX="134.0" layoutY="26.0" text="Date :" />
-            <ComboBox fx:id="choixSession" layoutX="85.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="21.0" layoutY="84.0" text="Enfant :" />
+            <Label layoutX="266.0" layoutY="84.0" text="Session :" />
+            <Label layoutX="266.0" layoutY="29.0" text="Date :" />
+            <ComboBox fx:id="choixSession" layoutX="85.0" layoutY="24.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="31.0" layoutY="29.0" text="Enfant :" />
+            <ComboBox fx:id="choixSession1" layoutX="85.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="31.0" layoutY="84.0" text="Activités :" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="150.0" layoutY="-1.0" prefHeight="213.0" prefWidth="500.0" AnchorPane.bottomAnchor="385.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -34,11 +37,12 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
                               <Label layoutX="45.0" layoutY="122.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des sports ci-dessus" />
-                              <Label alignment="TOP_LEFT" layoutX="161.0" layoutY="29.0" text="Sports" textAlignment="CENTER">
+                              <Label alignment="TOP_LEFT" layoutX="160.0" layoutY="14.0" text="Sports" textAlignment="CENTER">
                                  <font>
                                     <Font name="Forte" size="65.0" />
                                  </font>
                               </Label>
+                              <Separator layoutX="12.0" layoutY="101.0" prefHeight="4.0" prefWidth="474.0" />
                            </children>
                         </AnchorPane>
                     </content>
@@ -158,6 +162,26 @@
                         </AnchorPane>
                     </content>
                   </Tab>
+                  <Tab text="Tennis">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="194.0" fitWidth="277.0" layoutX="14.0" layoutY="14.0" opacity="0.35" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-8.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <image>
+                                    <Image url="@../image/tennis.jpg" />
+                                 </image>
+                              </ImageView>
+                              <TreeTableView layoutX="277.0" prefHeight="185.0" prefWidth="224.0">
+                                 <columns>
+                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                 </columns>
+                              </TreeTableView>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
               </tabs>
             </TabPane>
          </children>
@@ -184,14 +208,6 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="254.0">
                            <children>
-                              <ImageView fitHeight="184.0" fitWidth="286.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../image/ballonFoot.jpg" />
-                                 </image>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
-                              </ImageView>
                               <TreeTableView layoutX="276.0" prefHeight="193.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
                                     <TreeTableColumn prefWidth="75.0" text="Jours" />
@@ -207,14 +223,6 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ImageView fitHeight="188.0" fitWidth="335.0" layoutX="-1.0" layoutY="-3.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../image/ballonBasket.jpg" />
-                                 </image>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
-                              </ImageView>
                               <TreeTableView layoutX="276.0" layoutY="-2.0" prefHeight="192.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
                                     <TreeTableColumn prefWidth="75.0" text="Jours" />
@@ -230,14 +238,6 @@
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ImageView fitHeight="187.0" fitWidth="313.0" layoutX="-1.0" opacity="0.2" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../image/ballonHandball.jpg" />
-                                 </image>
-                                 <effect>
-                                    <DropShadow />
-                                 </effect>
-                              </ImageView>
                               <TreeTableView layoutX="280.0" prefHeight="186.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
                                     <TreeTableColumn prefWidth="75.0" text="Jours" />

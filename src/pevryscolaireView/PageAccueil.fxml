@@ -7,63 +7,74 @@
 
 <AnchorPane fx:id="panneauAccueil" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.SceneConnexionController">
    <children>
-      <AnchorPane layoutX="150.0" prefHeight="109.0" prefWidth="564.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutX="150.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="381.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label layoutX="14.0" layoutY="9.0" text="BONJOUR">
+            <Label layoutX="14.0" layoutY="9.0" text="Bonjour">
                <font>
                   <Font name="Calibri" size="30.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="62.0" prefHeight="18.0" prefWidth="479.0" text="La plus grande part du coût de ces prestations est prise en charge par le budget communal. ">
+            <Label layoutX="14.0" layoutY="68.0" prefHeight="18.0" prefWidth="479.0" text="La plus grande part du coût de ces prestations est prise en charge par le budget communal. ">
                <font>
                   <Font size="11.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="80.0" text="Une participation est demandée en tenant compte de vos ressources grâce au calcul de votre quotient familial.">
+            <Label layoutX="14.0" layoutY="86.0" text="Une participation est demandée en tenant compte de vos ressources grâce au calcul de votre quotient familial.">
                <font>
                   <Font size="11.0" />
                </font>
             </Label>
-            <Label layoutX="14.0" layoutY="44.0" prefHeight="18.0" prefWidth="549.0" text="Votre ville propose pour vos enfants des prestations afin de les accompagner et de faciliter votre organisation.">
+            <Label layoutX="14.0" layoutY="50.0" prefHeight="18.0" prefWidth="549.0" text="Votre ville propose pour vos enfants des prestations afin de les accompagner et de faciliter votre organisation.">
                <font>
                   <Font size="11.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="311.0" prefHeight="189.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="311.0">
+      <AnchorPane layoutY="118.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="118.0">
          <children>
-            <Label layoutX="186.0" layoutY="11.0" text="Lieux de loisirs">
+            <Label layoutX="86.0" layoutY="-4.0" text="Les différents services proposés" textAlignment="CENTER">
                <font>
                   <Font name="Forte" size="30.0" />
                </font>
             </Label>
-            <Separator layoutX="279.0" layoutY="-86.0" orientation="VERTICAL" prefHeight="200.0" rotate="90.0" />
-            <Separator layoutX="278.0" layoutY="-54.0" orientation="VERTICAL" prefHeight="200.0" rotate="90.0" />
-         </children>
-      </AnchorPane>
-      <AnchorPane layoutX="29.0" layoutY="118.0" prefHeight="200.0" prefWidth="370.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-         <children>
-            <Label layoutX="79.0" layoutY="-4.0" text="Les différents services proposés" textAlignment="CENTER">
-               <font>
-                  <Font name="Forte" size="30.0" />
-               </font>
-            </Label>
-            <AnchorPane layoutX="3.0" layoutY="34.0" prefHeight="166.0" prefWidth="181.0">
+            <AnchorPane layoutX="3.0" layoutY="34.0" prefHeight="159.0" prefWidth="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="35.0">
                <children>
                   <Label layoutX="19.0" layoutY="5.0" text="Accueil du matin et du soir" />
+                  <Label layoutX="14.0" layoutY="35.0" text="- Le matin de 7h45 à 8h30" />
+                  <Label layoutX="14.0" layoutY="89.0" text="- Le soir de 16h30 à 18h" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="182.0" layoutY="34.0" prefHeight="166.0" prefWidth="200.0">
+            <AnchorPane layoutX="182.0" layoutY="34.0" prefHeight="166.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="181.60000000000002" AnchorPane.topAnchor="35.0">
                <children>
-                  <Label layoutX="73.0" layoutY="5.0" text="Les sports" />
+                  <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="73.0" layoutY="5.0" text="Les sports" textAlignment="CENTER" />
+                  <Separator layoutX="3.0" layoutY="-17.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <Separator layoutX="192.0" orientation="VERTICAL" prefHeight="157.0" prefWidth="15.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-7.199999999999989" AnchorPane.topAnchor="0.0" />
+                  <Label layoutX="17.0" layoutY="34.0" prefHeight="18.0" prefWidth="54.0" text="- Football" />
+                  <Label layoutX="15.0" layoutY="61.0" prefHeight="18.0" prefWidth="62.0" text="- Basketball" />
+                  <Label layoutX="15.0" layoutY="89.0" prefHeight="18.0" prefWidth="62.0" text="- Handball" />
+                  <Label layoutX="120.0" layoutY="34.0" prefHeight="18.0" prefWidth="69.0" text="- Athlétisme" />
+                  <Label layoutX="120.0" layoutY="61.0" prefHeight="18.0" prefWidth="62.0" text="- Natation" />
+                  <Label layoutX="120.0" layoutY="89.0" prefHeight="18.0" prefWidth="62.0" text="- Tennis" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="375.0" layoutY="34.0" prefHeight="166.0" prefWidth="182.0">
+            <AnchorPane layoutX="378.0" layoutY="34.0" prefHeight="140.0" prefWidth="186.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="378.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
                <children>
                   <Label layoutX="44.0" layoutY="5.0" text="L'aide aux devoirs" />
+                  <Label layoutX="55.0" layoutY="33.0" text="Les mercredis" />
+                  <Label layoutX="15.0" layoutY="89.0" text="- Soit de 14h à 16h30" />
+                  <Label layoutX="15.0" layoutY="61.0" text="- Soit de 09h à 12h" />
                </children>
             </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="182.0" layoutY="293.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="293.0">
+         <children>
+            <Label layoutX="235.0" layoutY="21.0" text="Les lieux" textAlignment="CENTER">
+               <font>
+                  <Font name="Forte" size="25.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
