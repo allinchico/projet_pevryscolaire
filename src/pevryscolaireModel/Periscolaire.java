@@ -4,7 +4,19 @@ import java.util.ArrayList;
 
 public class Periscolaire extends Personne{
 	
-	
+	public Periscolaire(String id) {
+    	String requete = "SELECT * FROM periscolaire where id = "+id;
+        ArrayList<ArrayList> allInformations = ConnectMySQL.main(requete);
+        System.out.println("allInformations : "+allInformations);
+        for(ArrayList tab : allInformations) {
+        	System.out.println("Infos personne : "+tab);
+        	this.id = tab.get(0).toString();
+        	this.nom = tab.get(1).toString();
+        	this.prenom = tab.get(2).toString();
+        	this.dateDeNaissance = tab.get(3).toString();
+        	this.sexe = tab.get(4).toString();     	
+        }
+    }
 
     public void CreerActivite(String nom, String emplacement, String idEmp){
         String reqAct = "INSERT INTO activites (nom, lieu, idPeriscolaire) VALUES ('"+ nom + "'','"+ emplacement +"'','" + idEmp +"'')";

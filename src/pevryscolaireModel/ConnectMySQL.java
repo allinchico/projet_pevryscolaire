@@ -45,7 +45,7 @@ public class ConnectMySQL
 			System.out.println(tabRequete);
 		}
 		else{
-			Integer	res = stmt.executeUpdate(req);
+			ResultSet	res = stmt.executeQuery(req);
 		}
 		//etape 5: fermez l'objet de connexion
 		conn.close();

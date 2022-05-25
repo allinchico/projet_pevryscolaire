@@ -19,6 +19,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import main.MainApp;
+import pevryscolaireModel.Periscolaire;
 import pevryscolaireModel.Personne;
 import pevryscolaireModel.ResponsableLegal;
 
@@ -58,21 +59,36 @@ public class SceneConnexionController {
 		if(!Personne.seConnecter(id.getText(), password.getText()).isEmpty()) {
 			
 	    	ArrayList<ArrayList> tabUser = Personne.seConnecter(id.getText(), password.getText());
+	    	System.out.println("tab : "+tabUser);
+	    	
 	    	for(ArrayList tab : tabUser) {
-	    		System.out.println("id envoyé : "+tab);
-	    		user = new ResponsableLegal(tab.get(0).toString());
-	    		System.out.println(user.nom);
+	    		 ArrayList tabPeris = Personne.verifierStatutPeriscolaire(tab.get(1).toString());
+	    		 ArrayList tabResp = Personne.verifierStatutResponsable(tab.get(1).toString());
+	    		System.out.println(tabResp);
+	    		if(!tabPeris.isEmpty()) {
+	    			System.out.println("if periscolaire");
+	    			user = new Periscolaire(tab.get(0).toString());		
+	    			//TO DO FAIRE CODE APPEL PAGE PERISCOLAIRE
+	    		}
+	    		else if(!tabResp.isEmpty()){
+	    			System.out.println("if responsable legal");
+	    			user = new ResponsableLegal(tab.get(0).toString());
+	    			System.out.println(user.nom);
+		    		Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/ScenePrincipale.fxml"));
+		    		Scene pagePrincipaleScene = new Scene(pagePrincipale);
+			    	Stage fenetrePrincipale = (Stage)((Node)event.getSource()).getScene().getWindow();
+					fenetrePrincipale.setScene(pagePrincipaleScene);
+					fenetrePrincipale.show();
+	    		}
+	    		
+   
 	    	}
-	    	Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/ScenePrincipale.fxml"));
-	    	Scene pagePrincipaleScene = new Scene(pagePrincipale);
+	    	
+	    	
 
 	    	
 	     
-	    // Récupère les informations de la page
 	    	
-	    	Stage fenetrePrincipale = (Stage)((Node)event.getSource()).getScene().getWindow();
-			fenetrePrincipale.setScene(pagePrincipaleScene);
-			fenetrePrincipale.show();
 		}
 		else {
 			System.out.println("Problème : identifiant ou mot de passe incorrect");
