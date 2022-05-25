@@ -2,10 +2,16 @@ package pevryscolaireController;
 
 import javafx.fxml.FXML;
 
-public class PageFamilleController {
 
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
+import pevryscolaireModel.ResponsableLegal;
+
+public class PageFamilleController {
 	@FXML
     void initialize() {
-		System.out.println("Utilisateur famille : ");
+    	System.out.println("utilisateur famille : "+ SceneConnexionController.user.nom);
     }
+	
 }

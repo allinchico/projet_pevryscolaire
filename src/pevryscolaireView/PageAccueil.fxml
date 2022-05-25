@@ -3,9 +3,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Polygon?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panneauAccueil" prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.SceneConnexionController">
+<AnchorPane fx:id="panneauAccueil" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.SceneConnexionController">
    <children>
       <AnchorPane layoutX="150.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="381.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -29,9 +30,16 @@
                   <Font size="11.0" />
                </font>
             </Label>
+            <Separator layoutX="14.0" layoutY="42.0" prefHeight="2.0" prefWidth="254.0" />
+            <Label fx:id="nomUtilisateur" layoutX="119.0" layoutY="9.0" text="Label">
+               <font>
+                  <Font name="Calibri" size="30.0" />
+               </font>
+            </Label>
+            <Polygon fill="DODGERBLUE" layoutX="562.0" layoutY="-18.0" points="-40.79998779296875, 18.492919921875, 15.20001220703125, 77.5999755859375, 15.20001220703125, 18.492919921875" stroke="BLACK" strokeType="INSIDE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="118.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="207.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="118.0">
+      <AnchorPane layoutY="118.0" prefHeight="190.0" prefWidth="566.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="222.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="118.0">
          <children>
             <Label layoutX="86.0" layoutY="-4.0" text="Les différents services proposés" textAlignment="CENTER">
                <font>
@@ -70,11 +78,12 @@
       </AnchorPane>
       <AnchorPane layoutX="182.0" layoutY="293.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="293.0">
          <children>
-            <Label layoutX="235.0" layoutY="21.0" text="Les lieux" textAlignment="CENTER">
+            <Label layoutX="227.0" layoutY="14.0" text="Les lieux" textAlignment="CENTER">
                <font>
-                  <Font name="Forte" size="25.0" />
+                  <Font name="Forte" size="30.0" />
                </font>
             </Label>
+            <Separator layoutX="210.0" layoutY="49.0" prefHeight="3.0" prefWidth="142.0" />
          </children>
       </AnchorPane>
    </children>

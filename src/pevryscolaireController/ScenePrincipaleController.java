@@ -39,37 +39,6 @@ public class ScenePrincipaleController implements Initializable {
     
     @FXML
     private BorderPane panneauPrincipal;
- /*
-    @FXML
-    private void accederActivites(ActionEvent event) {
-    	try {
-    	AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PageActivites.fxml"));
-    	panneauPrincipal.setCenter(pane);
-    	} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-    
-    @FXML
-    private void accederAccueil(ActionEvent event) {
-    	try {
-    	AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PageAccueil.fxml"));
-    	panneauPrincipal.setCenter(pane);
-    	} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-    
-    @FXML
-    private void accederFamille(ActionEvent event) {
-    	try {
-    	AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PageFamille.fxml"));
-    	panneauPrincipal.setCenter(pane);
-    	} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-   */ 
     
    @FXML
     private void boutonAcceder(ActionEvent event) {
@@ -94,6 +63,11 @@ public class ScenePrincipaleController implements Initializable {
 		}
 	}	
 
+    @FXML
+    void initialize() {
+    	System.out.println("utilisateur : "+ SceneConnexionController.user);
+    }
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		// TODO Auto-generated method stub
@@ -101,11 +75,10 @@ public class ScenePrincipaleController implements Initializable {
 		try {
 			panneauAccueil = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/PageAccueil.fxml"));
 			panneauPrincipal.setCenter(panneauAccueil);
+			System.out.println("utilisateur : "+ SceneConnexionController.user.nom);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
 	}
 
 }

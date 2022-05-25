@@ -14,42 +14,42 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.PageActivitesController">
+<AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.PageActivitesController">
    <children>
-      <AnchorPane layoutY="215.0" prefHeight="282.0" prefWidth="500.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
+      <AnchorPane layoutY="215.0" prefHeight="117.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="271.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
          <children>
-            <DatePicker fx:id="choixDate" layoutX="315.0" layoutY="24.0" prefHeight="26.0" prefWidth="130.0" />
-            <ComboBox fx:id="choixActivites" layoutX="315.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="266.0" layoutY="84.0" text="Session :" />
-            <Label layoutX="266.0" layoutY="29.0" text="Date :" />
-            <ComboBox fx:id="choixSession" layoutX="85.0" layoutY="24.0" prefHeight="26.0" prefWidth="130.0" />
+            <DatePicker fx:id="choixDate" layoutX="376.0" layoutY="23.0" prefHeight="26.0" prefWidth="130.0" />
+            <ComboBox fx:id="choixSession" layoutX="376.0" layoutY="78.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="315.0" layoutY="82.0" text="Session :" />
+            <Label layoutX="315.0" layoutY="27.0" text="Date :" />
+            <ComboBox fx:id="choixEnfant" layoutX="85.0" layoutY="24.0" prefHeight="26.0" prefWidth="130.0" />
             <Label layoutX="31.0" layoutY="29.0" text="Enfant :" />
-            <ComboBox fx:id="choixSession1" layoutX="85.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
+            <ComboBox fx:id="choixActivites" layoutX="85.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
             <Label layoutX="31.0" layoutY="84.0" text="Activités :" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="150.0" layoutY="-1.0" prefHeight="213.0" prefWidth="500.0" AnchorPane.bottomAnchor="385.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="150.0" layoutY="-1.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TabPane layoutY="1.0" prefHeight="214.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.5999999999999943" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TabPane layoutY="1.0" prefHeight="214.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.5999999999999943" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <tabs>
                   <Tab text="Menu des sports">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Label layoutX="45.0" layoutY="122.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des sports ci-dessus" />
-                              <Label alignment="TOP_LEFT" layoutX="160.0" layoutY="14.0" text="Sports" textAlignment="CENTER">
+                              <Label layoutX="76.0" layoutY="103.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des sports ci-dessus" />
+                              <Label alignment="TOP_LEFT" layoutX="193.0" layoutY="14.0" text="Sports" textAlignment="CENTER">
                                  <font>
                                     <Font name="Forte" size="65.0" />
                                  </font>
                               </Label>
-                              <Separator layoutX="12.0" layoutY="101.0" prefHeight="4.0" prefWidth="474.0" />
+                              <Separator layoutX="44.0" layoutY="86.0" prefHeight="4.0" prefWidth="474.0" />
                            </children>
                         </AnchorPane>
                     </content>
                   </Tab>
                 <Tab closable="false" text="Football">
                   <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="254.0">
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="170.0" prefWidth="255.0">
                            <children>
                               <ImageView fitHeight="184.0" fitWidth="286.0" opacity="0.15" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -59,11 +59,11 @@
                                     <DropShadow />
                                  </effect>
                               </ImageView>
-                              <TreeTableView layoutX="276.0" prefHeight="193.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <TreeTableView layoutX="276.0" prefHeight="186.0" prefWidth="226.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <columns>
-                                  <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                  <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                  <TreeTableColumn prefWidth="95.0" text="Jours" />
+                                  <TreeTableColumn prefWidth="95.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="95.0" text="Lieux" />
                                 </columns>
                               </TreeTableView>
                            </children>
@@ -84,9 +84,9 @@
                               </ImageView>
                               <TreeTableView layoutX="276.0" layoutY="-2.0" prefHeight="192.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
-                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                    <TreeTableColumn prefWidth="95.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="95.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="95.0" text="Lieux" />
                                  </columns>
                               </TreeTableView>
                            </children>
@@ -107,9 +107,9 @@
                               </ImageView>
                               <TreeTableView layoutX="280.0" prefHeight="186.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
-                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                    <TreeTableColumn prefWidth="95.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="95.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="95.0" text="Lieux" />
                                  </columns>
                               </TreeTableView>
                            </children>
@@ -130,9 +130,9 @@
                               </ImageView>
                               <TreeTableView layoutX="282.0" layoutY="-2.0" prefHeight="187.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
-                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                    <TreeTableColumn prefWidth="95.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="95.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="95.0" text="Lieux" />
                                  </columns>
                               </TreeTableView>
                            </children>
@@ -143,7 +143,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <ImageView fitHeight="185.0" fitWidth="325.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="185.0" fitWidth="278.0" opacity="0.25" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../image/natation.jpg" />
                                  </image>
@@ -153,9 +153,9 @@
                               </ImageView>
                               <TreeTableView layoutX="278.0" prefHeight="185.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
-                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                    <TreeTableColumn prefWidth="95.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="95.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="95.0" text="Lieux" />
                                  </columns>
                               </TreeTableView>
                            </children>
@@ -171,11 +171,11 @@
                                     <Image url="@../image/tennis.jpg" />
                                  </image>
                               </ImageView>
-                              <TreeTableView layoutX="277.0" prefHeight="185.0" prefWidth="224.0">
+                              <TreeTableView layoutX="278.0" prefHeight="166.0" prefWidth="286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                  <columns>
-                                    <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                    <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                    <TreeTableColumn prefWidth="75.0" text="Lieux" />
+                                    <TreeTableColumn prefWidth="95.0" text="Jours" />
+                                    <TreeTableColumn prefWidth="95.0" text="Heures" />
+                                    <TreeTableColumn prefWidth="95.0" text="Lieux" />
                                  </columns>
                               </TreeTableView>
                            </children>
@@ -186,20 +186,21 @@
             </TabPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="2.0" layoutY="432.0" prefHeight="283.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="350.0">
+      <AnchorPane layoutX="2.0" layoutY="329.0" prefHeight="171.0" prefWidth="502.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="329.0">
          <children>
-            <TabPane layoutX="10.0" layoutY="7.0" prefHeight="214.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TabPane layoutX="10.0" layoutY="7.0" prefHeight="214.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <tabs>
                   <Tab text="Menu des activités">
                      <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Label layoutX="64.0" layoutY="118.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des activités" />
-                              <Label alignment="TOP_LEFT" layoutX="131.0" layoutY="36.0" text="Activités" textAlignment="CENTER">
+                              <Label layoutX="97.0" layoutY="97.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des activités" />
+                              <Label alignment="TOP_LEFT" layoutX="164.0" layoutY="14.0" text="Activités" textAlignment="CENTER">
                                  <font>
                                     <Font name="Forte" size="65.0" />
                                  </font>
                               </Label>
+                              <Separator layoutX="44.0" layoutY="84.0" prefHeight="4.0" prefWidth="474.0" />
                            </children>
                         </AnchorPane>
                      </content>

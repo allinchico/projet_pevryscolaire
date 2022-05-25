@@ -18,11 +18,10 @@ public class MainApp extends Application {
 		Parent pageConnexion = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/SceneConnexion.fxml"));
 		Scene connexionScene = new Scene(pageConnexion,450,500);
 		primaryStage.setScene(connexionScene);
-		primaryStage.show();	
+		primaryStage.show();
 		primaryStage.setTitle("Application Pevryscolaire");
 	}	
-
-
+	
 	public static void main(String[] args) {
 		launch(args);
 	}
