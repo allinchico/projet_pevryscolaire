@@ -9,10 +9,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
@@ -64,6 +66,12 @@ public class SceneConnexionController {
 		}
 		else {
 			System.out.println("Problème : identifiant ou mot de passe incorrect");
+			Alert errorAlert = new Alert(AlertType.ERROR);
+			errorAlert.setHeaderText("Erreur de saisie");
+			errorAlert.setContentText("Identifiant ou mot de passe incorrect");
+			errorAlert.showAndWait();
+			
+			
 		}
 		
 		

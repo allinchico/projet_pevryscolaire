@@ -8,6 +8,9 @@ Il faudrait aussi rendre plus claire le code, par l'utilisation de commentaires 
 
 import java.sql.*;
 import java.util.ArrayList;
+
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 public class ConnectMySQL
 {
 	public static ArrayList<ArrayList> main(String req)
@@ -21,7 +24,7 @@ public class ConnectMySQL
 
 			//etape 2: creer l'objet de connexion
 			Connection conn = DriverManager.getConnection(
-			"jdbc:mysql://localhost:3306/pevryscolaire_bdd", "root", "");
+			"jdbc:mysql://localhost:3306/pevryscolaire_bdd", "root", "root");
 
 			//etape 3: creer l'objet statement 
 			Statement stmt = conn.createStatement();
@@ -49,11 +52,13 @@ public class ConnectMySQL
 		}
 		//etape 5: fermez l'objet de connexion
 		conn.close();
-		System.out.println("Requete effectuée");
+		
+		
 		
 	}
 		//Prise en compte des erreurs potentiels
 		catch(Exception e){ 
+			
 			System.out.println(e);
 		}
 		return tabRequete;
