@@ -29,6 +29,21 @@ public class Personne {
         return allPeriscolaire;
     }
     
+    public static ArrayList ConsulterSession(String activite){
+
+        String reqSes = "SELECT * FROM session WHERE idActivite = '"+activite+"'";
+        ArrayList result = null;
+        try{
+            result = ConnectMySQL.main(reqSes);
+            System.out.println(result);
+            
+        }
+        catch(Exception e){
+            System.out.println("impossible d'éxécuter la requête : " + reqSes + "");
+        }
+        return result;
+    }
+    
     public static ArrayList verifierStatutResponsable(String idUser) {
     	String requete = "SELECT id from utilisateur where id in (Select id from responsablelegal where idUser = "+idUser+")";
     	ArrayList allResponsable = ConnectMySQL.main(requete);

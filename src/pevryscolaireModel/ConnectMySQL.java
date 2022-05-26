@@ -21,7 +21,7 @@ public class ConnectMySQL
 
 			//etape 2: creer l'objet de connexion
 			Connection conn = DriverManager.getConnection(
-			"jdbc:mysql://localhost:3306/pevryscolaire_bdd", "root", "");
+			"jdbc:mysql://localhost:3306/pevryscolaire_bdd", "root", "sio");
 
 			//etape 3: creer l'objet statement 
 			Statement stmt = conn.createStatement();
