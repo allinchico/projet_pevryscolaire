@@ -20,7 +20,7 @@
    <children>
       <AnchorPane layoutY="215.0" prefHeight="153.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
          <children>
-            <JFXButton fx:id="addActivite" buttonType="RAISED" layoutX="418.0" layoutY="94.0" onAction="#CreerActivite" style="-fx-background-color: #4CFF33;" text="Ajouter" />
+            <JFXButton fx:id="addActivite" buttonType="RAISED" layoutX="418.0" layoutY="94.0" onAction="#addActivites" style="-fx-background-color: #4CFF33;" text="Ajouter" />
             <TextField fx:id="nomActivite" layoutX="132.0" layoutY="33.0" prefHeight="26.0" prefWidth="130.0" />
             <Label layoutX="32.0" layoutY="37.0" text="Nom de l'activité :" />
             <Label layoutX="32.0" layoutY="99.0" text="Responsable :" />
@@ -188,13 +188,13 @@
       </AnchorPane>
       <AnchorPane layoutY="369.0" minHeight="0.0" minWidth="0.0" prefHeight="235.0" prefWidth="563.0">
          <children>
-            <JFXButton fx:id="addSession" buttonType="RAISED" layoutX="424.0" layoutY="164.0" style="-fx-background-color: #4CFF33;" text="Ajouter" />
+            <JFXButton fx:id="addSession" buttonType="RAISED" layoutX="424.0" layoutY="164.0" onAction="#addSessions" style="-fx-background-color: #4CFF33;" text="Ajouter" />
             <DatePicker fx:id="choixDate" layoutX="387.0" layoutY="44.0" prefHeight="26.0" prefWidth="130.0" />
             <Label layoutX="315.0" layoutY="49.0" text="Date :" />
-            <TextField layoutX="134.0" layoutY="104.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="31.0" layoutY="108.0" text="Heure :" />
-            <Label layoutX="34.0" layoutY="168.0" text="Lieux :" />
-            <TextField layoutX="134.0" layoutY="164.0" prefHeight="26.0" prefWidth="130.0" />
+            <TextField fx:id="heureSession" layoutX="134.0" layoutY="104.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="35.0" layoutY="109.0" prefHeight="18.0" prefWidth="50.0" text="Heure :" />
+            <Label layoutX="34.0" layoutY="168.0" text="Lieu :" />
+            <TextField fx:id="lieuSession" layoutX="134.0" layoutY="164.0" prefHeight="26.0" prefWidth="130.0" />
             <ComboBox fx:id="choixActivites" layoutX="134.0" layoutY="44.0" prefHeight="26.0" prefWidth="130.0" />
             <Label layoutX="34.0" layoutY="49.0" text="Activités :" />
             <Separator layoutX="29.0" layoutY="14.0" prefHeight="3.0" prefWidth="509.0" />

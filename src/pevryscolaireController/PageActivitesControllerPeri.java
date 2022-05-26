@@ -34,7 +34,7 @@ public class PageActivitesControllerPeri {
     private ComboBox choixActivites, choixResponsable;
     
     @FXML
-    private TextField nomActivite, materiel;
+    private TextField nomActivite, materiel, heureSession, lieuSession;
 
     @FXML
     private DatePicker choixDate;
@@ -45,7 +45,7 @@ public class PageActivitesControllerPeri {
     
     
     @FXML
-    private void CreerActivite(ActionEvent event) {
+    private void addActivites(ActionEvent event) {
     	//idResp pour récupérer le nom du responsable périscolaire sélectionné dans le combobox
     	String idResp = (String) choixResponsable.getValue();
     	//requête pour récupérer l'id du responsable périscolaire à partir de son nom
@@ -56,7 +56,16 @@ public class PageActivitesControllerPeri {
 		Periscolaire.CreerActivite(nomActivite.getText(), materiel.getText(), ((List<String>) idRespTab.get(0)).get(0).toString());
     }
   
-    
+    @FXML
+    private void addSessions(ActionEvent event) {
+    	//idActivites pour récupérer le nom de l'activité sélectionnée dans le combobox
+    	String nomActivite = (String) choixActivites.getValue();
+    	//requête pour récupérer l'id de l'activité à partir de son nom
+    	String reqIdActivite = "SELECT id FROM activites WHERE nom = '"+nomActivite+"'";
+    	ArrayList idActiviteTab = ConnectMySQL.main(reqIdActivite);
+    	System.out.println(idActiviteTab);
+    	Periscolaire.CreerSession(choixDate.getConverter().fromString(choixDate.getEditor().getText()), heureSession.getText(), lieuSession.getText(), ((List<String>) idActiviteTab.get(0)).get(0).toString()); 
+    }
     
     @FXML
     void initialize() {

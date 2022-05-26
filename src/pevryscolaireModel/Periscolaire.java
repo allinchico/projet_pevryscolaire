@@ -1,5 +1,6 @@
 package pevryscolaireModel;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Periscolaire extends Personne{
@@ -36,8 +37,8 @@ public class Periscolaire extends Personne{
 
     }
 
-    public void CreerSession(String date, String heure, String lieu, Integer idActivite){
-        String reqSes = "INSERT INTO session (date, heure, lieu, idActivite) VALUES ('"+ date + "','"+ heure +"','" + lieu +"','"+ idActivite +"')";
+    public static void CreerSession(LocalDate localDate, String heure, String lieu, String string){
+        String reqSes = "INSERT INTO session (date, heure, lieu, idActivite) VALUES ('"+ localDate + "','"+ heure +"','" + lieu +"','"+ string +"')";
         try{
             ConnectMySQL.main(reqSes);
         }
