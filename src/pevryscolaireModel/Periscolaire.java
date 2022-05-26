@@ -51,17 +51,7 @@ public class Periscolaire extends Personne{
 
     }
 
-    public void ConsulterSession(Integer idActivite){
-
-        String reqSes = "SELECT * FROM session WHERE idActivite = '"+idActivite+"'";
-        try{
-            ArrayList result = ConnectMySQL.main(reqSes);
-            System.out.println(result);
-        }
-        catch(Exception e){
-            System.out.println("impossible d'éxécuter la requête : " + reqSes + "");
-        }
-    }
+    
 
     public void ModifierSession(){
 

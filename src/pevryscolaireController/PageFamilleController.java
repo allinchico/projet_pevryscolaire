@@ -12,6 +12,7 @@ public class PageFamilleController {
 	@FXML
     void initialize() {
     	System.out.println("utilisateur famille : "+ SceneConnexionController.user.nom);
+    	
     }
 	
 }

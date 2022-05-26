@@ -100,7 +100,9 @@ public class SceneConnexionController {
 
 		}
 		else {
+
 			System.out.println("Problème : identifiant ou mot de passe incorrect");
+
 			Alert errorAlert = new Alert(AlertType.ERROR);
             errorAlert.setHeaderText("Erreur de saisie");
             errorAlert.setContentText("Identifiant ou mot de passe incorrect");
