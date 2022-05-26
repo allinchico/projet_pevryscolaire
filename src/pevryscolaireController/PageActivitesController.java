@@ -9,6 +9,9 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import pevryscolaireModel.Personne;
 import pevryscolaireModel.ResponsableLegal;
 
@@ -29,6 +32,9 @@ public class PageActivitesController {
     private DatePicker choixDate;
 
     @FXML
+    private TabPane ongletSport;
+    
+    @FXML
     void initialize() {
         
         System.out.println("utilisateur famille : "+ SceneConnexionController.user.nom);
@@ -36,6 +42,7 @@ public class PageActivitesController {
         System.out.println(AllActivites);
         for(ArrayList activite: AllActivites) {
         	activitesListe.add(activite.get(1).toString());
+        	ongletSport.getTabs().add(new Tab(activite.get(1).toString(), new Label("AFFICHER SESSION "+activite.get(1).toString())));
         }
         ArrayList<ArrayList> AllEnfants = ResponsableLegal.getEnfants();
         for(ArrayList enfant: AllEnfants) {

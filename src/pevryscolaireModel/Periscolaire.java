@@ -18,8 +18,15 @@ public class Periscolaire extends Personne{
         }
     }
 
-    public void CreerActivite(String nom, String emplacement, String idEmp){
-        String reqAct = "INSERT INTO activites (nom, lieu, idPeriscolaire) VALUES ('"+ nom + "'','"+ emplacement +"'','" + idEmp +"'')";
+	
+	public static ArrayList<ArrayList> getPeriscolaire() {
+		String reqPeri = "SELECT nom, prenom FROM periscolaire";
+        ArrayList<ArrayList> reponsablePeri = ConnectMySQL.main(reqPeri);
+        return reponsablePeri;
+	}
+	
+    public static void CreerActivite(String nom, String materiel, String idEmp){
+        String reqAct = "INSERT INTO activites (nom, materiel, idPeriscolaire) VALUES ('"+ nom + "','"+ materiel +"','" + idEmp +"')";
         try{
             ConnectMySQL.main(reqAct);
         }
