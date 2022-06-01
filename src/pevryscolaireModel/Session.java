@@ -5,13 +5,14 @@ public class Session {
 	public  String date;
 	public  String heure;
 	public  String lieu;
+	public String enfant;
 	
-	
-	public Session(String activite, String date, String heure, String lieu) {
+	public Session(String activite, String date, String heure, String lieu, String enfant) {
 		this.activite = activite;
         this.date = date;
         this.heure = heure;
         this.lieu = lieu;
+        this.enfant = enfant;
         
 	}
 	
@@ -42,5 +43,13 @@ public class Session {
     }
     public String setActivite(String Activite) {
     	return this.activite = Activite;
+    }
+    
+    public String getEnfant() {
+        return enfant;
+    }
+    
+    public String setEnfant(String Enfant) {
+    	return this.enfant = Enfant;
     }
 }

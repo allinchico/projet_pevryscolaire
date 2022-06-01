@@ -16,6 +16,7 @@ import javafx.scene.control.TabPane;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import pevryscolaireModel.ConnectMySQL;
 import pevryscolaireModel.Personne;
 import pevryscolaireModel.ResponsableLegal;
 import pevryscolaireModel.Session;
@@ -24,6 +25,7 @@ public class PageActivitesController {
 
 	ObservableList<String> activitesListe = FXCollections.observableArrayList();
 	ObservableList<String> enfantsListe = FXCollections.observableArrayList();
+	ObservableList<String> sessionListe = FXCollections.observableArrayList();
     @FXML
     private ResourceBundle resources;
 
@@ -44,7 +46,7 @@ public class PageActivitesController {
     
     
     
-    
+    String idSession;
     
 
     
@@ -53,9 +55,7 @@ public class PageActivitesController {
 
     @FXML
     void initialize() {
-    	
         ArrayList<ArrayList> AllActivites = Personne.ConsulterActivite();
-       
         for(ArrayList activite: AllActivites) {
         	 ArrayList<Session> ligneSession = new ArrayList();
         	TableView table = new TableView();
@@ -85,11 +85,11 @@ public class PageActivitesController {
         	
         	
         	for(ArrayList session: tabSession) {
+        		sessionListe.add(activite.get(1)+"/"+session.get(1)+"/"+session.get(2)+"/"+session.get(3));
         		
-        		
-        		Session ses = new Session(activite.get(1).toString(),session.get(1).toString(),session.get(2).toString(),session.get(3).toString());
+        		Session ses = new Session(activite.get(1).toString(),session.get(1).toString(),session.get(2).toString(),session.get(3).toString(),"");
         		ligneSession.add(ses);
-        		System.out.println(activite.get(1).toString()+"||"+session.get(1).toString()+"||"+session.get(2).toString()+"||"+session.get(3).toString());
+        		System.out.println(activite.get(1).toString()+"/"+session.get(1).toString()+"/"+session.get(2).toString()+"/"+session.get(3).toString());
         		
         		
         	}
@@ -107,6 +107,8 @@ public class PageActivitesController {
         
         
         
+        
+        
 
         
         ArrayList<ArrayList> AllEnfants = ResponsableLegal.getEnfants();
@@ -117,13 +119,28 @@ public class PageActivitesController {
         choixEnfant.setItems(enfantsListe);
     	choixActivites.setValue("<Veuillez sélectionner un sport>");
     	choixActivites.setItems(activitesListe);
-    	
+    	choixSession.setValue("<Veuillez sélectionner une session>");
+    	choixSession.setItems(sessionListe);
         
     	
     }
     
-    
-    
+    @FXML
+    void inscrireEnfant() {
+    	if(choixEnfant.getValue() != "<Veuillez sélectionner un enfant>" &&  choixSession.getValue() != "<Veuillez sélectionner une session>") {
+    		ArrayList enfant = ConnectMySQL.main("SELECT id FROM enfant WHERE prenom = '"+choixEnfant.getValue().toString()+"'");
+    		
+    		System.out.println(choixEnfant.getValue());
+    		System.out.println(choixSession.getValue());
+    		String[] parts = choixSession.getValue().toString().split("/");
+    		System.out.println(parts[0]);
+    		
+    		ArrayList session = ConnectMySQL.main("SELECT id FROM session WHERE date = '"+parts[1]+"' AND heure = '"+parts[2]+"' AND lieu = '"+parts[3]+"' and idActivite in (SELECT id FROM activites WHERE nom = '"+parts[0]+"')");
+    	
+    	String req = "INSERT INTO enfant_session values ("+enfant.get(0).toString().replaceAll("\\[|\\]", "")+","+session.get(0).toString().replaceAll("\\[|\\]", "")+");";
+    	ConnectMySQL.main(req);
+    	}
+    }
     
 
 }
