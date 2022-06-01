@@ -56,6 +56,17 @@ public class Periscolaire extends Personne{
     public void ModifierSession(){
 
     }
+    
+    
+    public static void SupprimerActivite(String string){
+        String reqSes = "DELETE FROM activites WHERE ID = "+string; 
+        try{
+            ConnectMySQL.main(reqSes);
+        }
+        catch(Exception e){
+            System.out.println("impossible d'éxécuter la requête : " + reqSes + "");
+        }
+    }
 
     public void SupprimerSession(Integer idSession){
         String reqSes = "DELETE FROM session WHERE Id ='"+ idSession +"';"; 
