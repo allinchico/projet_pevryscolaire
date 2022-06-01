@@ -28,5 +28,8 @@
          </font>
       </Label>
       <JFXButton fx:id="deleteActivite" buttonType="RAISED" layoutX="359.0" layoutY="145.0" onAction="#deleteActivites" style="-fx-background-color: #F43A3A;" text="Supprimer" />
+      <ComboBox fx:id="choixSessions" layoutX="78.0" layoutY="276.0" prefWidth="150.0" />
+      <Label layoutX="21.0" layoutY="280.0" text="Sessions :" />
+      <JFXButton fx:id="deleteSession" buttonType="RAISED" layoutX="359.0" layoutY="276.0" onAction="#deleteSessions" style="-fx-background-color: #F43A3A;" text="Supprimer" />
    </children>
 </AnchorPane>

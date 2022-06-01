@@ -13,7 +13,7 @@
 
 <AnchorPane style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.PageActivitesControllerPeri">
    <children>
-      <AnchorPane layoutY="215.0" prefHeight="153.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="242.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
+      <AnchorPane layoutY="162.0" prefHeight="153.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="288.6" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <JFXButton fx:id="addActivite" buttonType="RAISED" layoutX="418.0" layoutY="94.0" onAction="#addActivites" style="-fx-background-color: #4CFF33;" text="Ajouter" />
             <TextField fx:id="nomActivite" layoutX="132.0" layoutY="33.0" prefHeight="26.0" prefWidth="130.0" />
@@ -24,9 +24,9 @@
             <Label layoutX="307.0" layoutY="37.0" text="Matériel :" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="150.0" layoutY="-1.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <AnchorPane layoutX="150.0" layoutY="-1.0" prefHeight="161.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TabPane fx:id="ongletSport" layoutY="1.0" prefHeight="214.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.5999999999999943" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TabPane fx:id="ongletSport" layoutY="1.0" prefHeight="190.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <tabs>
                   <Tab text="Menu des sports">
                     <content>
@@ -46,18 +46,23 @@
             </TabPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutY="369.0" minHeight="0.0" minWidth="0.0" prefHeight="235.0" prefWidth="563.0">
+      <AnchorPane layoutY="317.0" minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="563.0">
          <children>
-            <JFXButton fx:id="addSession" buttonType="RAISED" layoutX="424.0" layoutY="164.0" onAction="#addSessions" style="-fx-background-color: #4CFF33;" text="Ajouter" />
-            <DatePicker fx:id="choixDate" layoutX="387.0" layoutY="44.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="315.0" layoutY="49.0" text="Date :" />
-            <TextField fx:id="heureSession" layoutX="134.0" layoutY="104.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="35.0" layoutY="109.0" prefHeight="18.0" prefWidth="50.0" text="Heure :" />
-            <Label layoutX="34.0" layoutY="168.0" text="Lieu :" />
-            <TextField fx:id="lieuSession" layoutX="134.0" layoutY="164.0" prefHeight="26.0" prefWidth="130.0" />
-            <ComboBox fx:id="choixActivites" layoutX="134.0" layoutY="44.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="34.0" layoutY="49.0" text="Activités :" />
+            <JFXButton fx:id="addSession" buttonType="RAISED" layoutX="259.0" layoutY="218.0" onAction="#addSessions" style="-fx-background-color: #4CFF33;" text="Ajouter" />
+            <DatePicker fx:id="choixDate" layoutX="386.0" layoutY="101.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="314.0" layoutY="105.0" text="Date :" />
+            <TextField fx:id="heureSession" layoutX="134.0" layoutY="154.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="34.0" layoutY="158.0" prefHeight="18.0" prefWidth="50.0" text="Heure :" />
+            <Label layoutX="316.0" layoutY="158.0" text="Lieu :" />
+            <TextField fx:id="lieuSession" layoutX="386.0" layoutY="153.0" prefHeight="26.0" prefWidth="130.0" />
+            <ComboBox fx:id="choixActivites" layoutX="134.0" layoutY="102.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="34.0" layoutY="106.0" text="Activités :" />
             <Separator layoutX="29.0" layoutY="14.0" prefHeight="3.0" prefWidth="509.0" />
+            <Label alignment="TOP_LEFT" layoutX="107.0" layoutY="28.0" text="Ajout des Sessions" textAlignment="CENTER">
+               <font>
+                  <Font name="Forte" size="45.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
