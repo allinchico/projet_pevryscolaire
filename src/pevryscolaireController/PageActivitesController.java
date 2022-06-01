@@ -33,7 +33,7 @@ public class PageActivitesController {
     private URL location;
 
     @FXML
-    private ComboBox choixActivites, choixEnfant, choixSession;
+    private ComboBox choixEnfant, choixSession;
 
     @FXML
     private DatePicker choixDate;
@@ -99,15 +99,10 @@ public class PageActivitesController {
             }
         	
         	Tab tab = new Tab(activite.get(1).toString());
+        	table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         	tab.setContent(table);
         	ongletSport.getTabs().add(tab);
         }
-        
-        
-        
-        
-        
-        
         
 
         
@@ -117,8 +112,6 @@ public class PageActivitesController {
         }
         choixEnfant.setValue("<Veuillez sélectionner un enfant>");
         choixEnfant.setItems(enfantsListe);
-    	choixActivites.setValue("<Veuillez sélectionner un sport>");
-    	choixActivites.setItems(activitesListe);
     	choixSession.setValue("<Veuillez sélectionner une session>");
     	choixSession.setItems(sessionListe);
         

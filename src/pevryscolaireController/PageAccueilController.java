@@ -6,11 +6,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import main.MainApp;
 
-public class PageAccueilController implements Initializable {
+public class PageAccueilController{
 
 	
     @FXML
@@ -22,18 +23,21 @@ public class PageAccueilController implements Initializable {
     @FXML
     private BorderPane panneauPrincipal;
     
+    @FXML
+    private Label nomUser;
+    
     
   
     @FXML
     void initialize() {
-
+    	nomUser.setText(SceneConnexionController.user.nom.toString());
     }
 
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
-		
-	}
+
+
+	
+
+	
 
 }
 

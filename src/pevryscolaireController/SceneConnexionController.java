@@ -70,10 +70,18 @@ public class SceneConnexionController {
 	    		 ArrayList tabPeris = Personne.verifierStatutPeriscolaire(tab.get(1).toString());
 	    		 ArrayList tabResp = Personne.verifierStatutResponsable(tab.get(1).toString());
 	    		System.out.println(tabResp);
+	    		
 	    		if(!tabPeris.isEmpty()) {
 	    			System.out.println("if periscolaire");
 	    			user = new Periscolaire(tab.get(0).toString());		
 	    			//TO DO FAIRE CODE APPEL PAGE PERISCOLAIRE
+	    			System.out.println(user.nom);
+		    		Parent pagePrincipale = FXMLLoader.load(getClass().getClassLoader().getResource("pevryscolaireView/ScenePrincipalePeri.fxml"));
+		    		Scene pagePrincipaleScene = new Scene(pagePrincipale);
+			    	Stage fenetrePrincipale = (Stage)((Node)event.getSource()).getScene().getWindow();
+					fenetrePrincipale.setScene(pagePrincipaleScene);
+					fenetrePrincipale.show();
+					System.out.println("Ouverture peri");
 	    		}
 	    		else if(!tabResp.isEmpty()){
 	    			System.out.println("if responsable legal");
@@ -92,6 +100,9 @@ public class SceneConnexionController {
 
 		}
 		else {
+
+			System.out.println("Problème : identifiant ou mot de passe incorrect");
+
 			Alert errorAlert = new Alert(AlertType.ERROR);
             errorAlert.setHeaderText("Erreur de saisie");
             errorAlert.setContentText("Identifiant ou mot de passe incorrect");

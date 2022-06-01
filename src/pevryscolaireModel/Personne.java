@@ -53,6 +53,7 @@ public class Personne {
 
     public static ArrayList<ArrayList> seConnecter(String login, String password){
         String reqUse = "SELECT id, idPersonne FROM utilisateur WHERE login = '"+login+"' AND password = '"+password+"';";
+        //String reqUse = "SELECT id, idPersonne FROM utilisateur WHERE login = 'John' AND password = 'miage';";
         System.out.println(reqUse);
         return ConnectMySQL.main(reqUse);
     }

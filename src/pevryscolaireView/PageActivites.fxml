@@ -1,109 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TreeTableColumn?>
-<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pevryscolaireController.PageActivitesController">
    <children>
-      <AnchorPane style="-fx-background-color: #FFFFFF;">
+      <AnchorPane style="-fx-background-color: #FFFFFF;" />
+      <AnchorPane layoutY="214.0" prefHeight="263.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="214.0">
          <children>
-            <AnchorPane prefHeight="171.0" prefWidth="502.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="329.0">
-               <children>
-                  <TabPane layoutX="10.0" layoutY="7.0" prefHeight="214.0" prefWidth="500.0" style="-fx-background-color: #FFFFFF;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <tabs>
-                        <Tab text="Menu des activités">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <Label layoutX="97.0" layoutY="97.0" text="Vous pouvez inscrire vos enfants aux différentes sessions des activités" />
-                                    <Label alignment="TOP_LEFT" layoutX="164.0" layoutY="14.0" text="Activités" textAlignment="CENTER">
-                                       <font>
-                                          <Font name="Forte" size="65.0" />
-                                       </font>
-                                    </Label>
-                                    <Separator layoutX="44.0" layoutY="84.0" prefHeight="4.0" prefWidth="474.0" />
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </Tab>
-                        <Tab closable="false" text="Accueil du matin">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="171.0" prefWidth="254.0">
-                                 <children>
-                                    <TreeTableView layoutX="276.0" prefHeight="193.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <columns>
-                                          <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                          <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                          <TreeTableColumn prefWidth="75.0" text="Lieux" />
-                                       </columns>
-                                    </TreeTableView>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </Tab>
-                        <Tab text="Accueil du soir">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <TreeTableView layoutX="276.0" layoutY="-2.0" prefHeight="192.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <columns>
-                                          <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                          <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                          <TreeTableColumn prefWidth="75.0" text="Lieux" />
-                                       </columns>
-                                    </TreeTableView>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </Tab>
-                        <Tab text="Aide aux devoirs">
-                           <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <TreeTableView layoutX="280.0" prefHeight="186.0" prefWidth="224.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                       <columns>
-                                          <TreeTableColumn prefWidth="75.0" text="Jours" />
-                                          <TreeTableColumn prefWidth="75.0" text="Heures" />
-                                          <TreeTableColumn prefWidth="75.0" text="Lieux" />
-                                       </columns>
-                                    </TreeTableView>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </Tab>
-                     </tabs>
-                  </TabPane>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane prefHeight="117.0" prefWidth="563.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="271.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="215.0">
-         <children>
-            <DatePicker fx:id="choixDate" layoutX="346.0" layoutY="24.0" prefHeight="26.0" prefWidth="130.0" />
-            <ComboBox fx:id="choixSession" layoutX="346.0" layoutY="77.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="292.0" layoutY="82.0" text="Session :" />
-            <Label layoutX="300.0" layoutY="28.0" text="Date :" />
+            <ComboBox fx:id="choixSession" layoutX="377.0" layoutY="24.0" prefHeight="26.0" prefWidth="130.0" />
+            <Label layoutX="308.0" layoutY="29.0" text="Session :" />
             <ComboBox fx:id="choixEnfant" layoutX="85.0" layoutY="24.0" prefHeight="26.0" prefWidth="130.0" />
             <Label layoutX="31.0" layoutY="29.0" text="Enfant :" />
-            <ComboBox fx:id="choixActivites" layoutX="85.0" layoutY="80.0" prefHeight="26.0" prefWidth="130.0" />
-            <Label layoutX="31.0" layoutY="84.0" text="Activités :" />
-            <Button layoutX="497.0" layoutY="78.0" mnemonicParsing="false" onAction="#inscrireEnfant" text="Inscrire" />
+            <JFXButton buttonType="RAISED" layoutX="254.0" layoutY="106.0" onAction="#inscrireEnfant" ripplerFill="BLACK" style="-fx-background-color: #4CFF33;" text="Inscrire" />
          </children>
       </AnchorPane>
       <AnchorPane style="-fx-background-color: #FFFFFF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TabPane fx:id="ongletSport" layoutY="1.0" prefHeight="214.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.5999999999999943" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TabPane fx:id="ongletSport" layoutY="1.0" prefHeight="214.0" prefWidth="563.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <tabs>
-                  <Tab fx:id="menuSport" text="Menu des sports" />
+                  <Tab fx:id="menuSport" text="Menu des sports">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane layoutX="182.0" layoutY="-7.0" prefHeight="189.0" prefWidth="563.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <ImageView fitHeight="188.0" fitWidth="430.0" layoutX="67.0" opacity="0.35" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-0.08182373046875568" AnchorPane.leftAnchor="67.0" AnchorPane.rightAnchor="66.20000000000005" AnchorPane.topAnchor="0.0">
+                                       <image>
+                                          <Image url="@../image/Sports.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="182.0" layoutY="14.0" text="Activités">
+                                       <font>
+                                          <Font name="Cambria" size="55.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="93.0" layoutY="84.0" text="Vous pouvez inscrire vos enfants aux différentes activités ci-dessus">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <AnchorPane layoutX="498.0" layoutY="-3.0" opacity="0.45" prefHeight="186.0" prefWidth="66.0" style="-fx-background-color: #4485A4;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                    <AnchorPane layoutY="-1.0" opacity="0.45" prefHeight="186.0" prefWidth="67.0" style="-fx-background-color: #4485A4;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
               </tabs>
             </TabPane>
          </children>
